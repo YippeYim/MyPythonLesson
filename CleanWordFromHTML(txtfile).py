@@ -5,17 +5,11 @@ lineList = file.readlines()
 # create output file
 outFile = open("output.txt","w",encoding="utf-8")
 
-# print(lineList)
 for line in lineList:
     line.strip()
 
     cutTail = len(line)-5
     line = line[:cutTail]
-
-
-    line.strip()
-        
-    print(line)
 
     for idx in range(1,len(line)):
         idx *= -1
@@ -31,8 +25,6 @@ for line in lineList:
                     break
             
             outFile.write(word+";\n")
-
-            # outFile.write(line[idx+1:].strip()+";"+"\n")
             break
     
     file.close
